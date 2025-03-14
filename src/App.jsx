@@ -68,7 +68,13 @@ const App = () => {
       <Route path="/" element={<MerchCarousel addToWishlist={addToWishlist} orderNow={orderNow} />} />
       <Route path="/order" element={<OrderForm order={selectedItem} onOrderSubmit={handleOrderSubmit} />} />
       <Route path="/past-orders" element={<PastOrders orders={orders} />} />
-      <Route path="/wishlist" element={<Wishlist wishlist={wishlist} setWishlist={setWishlist} />} />
+      <Route path="/wishlist" element={
+        <Wishlist 
+          wishlist={wishlist} 
+          setWishlist={setWishlist}
+          orderNow={orderNow}
+        />
+      } />
     </Routes>
   );
 };

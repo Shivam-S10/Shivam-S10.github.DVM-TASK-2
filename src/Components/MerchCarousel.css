@@ -1,0 +1,104 @@
+.carousel {
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    touch-action: pan-x pinch-zoom; /* Enable horizontal touch, disable vertical */
+  }
+  
+  .carousel-item {
+    flex: 0 0 100%;
+    width: 100%;
+    display: block !important;
+  }
+  
+  .card {
+    margin: 0 auto;
+    max-width: 800px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    background-color: white;
+    border: none;
+  }
+  
+  .image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    padding: 20px;
+    min-height: 600px;
+  }
+  
+  .card-img-top {
+    max-width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .carousel-control-prev,
+  .carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel-control-prev {
+    left: 20px;
+  }
+  
+  .carousel-control-next {
+    right: 20px;
+  }
+  
+  .carousel-indicators {
+    bottom: -50px;
+  }
+  
+  /* Prevent vertical scrolling */
+  .carousel-inner {
+    overflow-y: hidden;
+  }
+  
+  /* Enable smooth transitions */
+  .carousel-item.active,
+  .carousel-item-next,
+  .carousel-item-prev {
+    display: block;
+    transition: transform 0.6s ease-in-out;
+  }
+  
+  /* Optional: Add hover effect */
+  .card-img-top:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Make the carousel responsive */
+  @media (max-width: 768px) {
+    .carousel {
+      max-width: 100%;
+      padding: 10px;
+    }
+  
+    .image-container {
+      min-height: 400px;
+    }
+  
+    .card-img-top {
+      max-height: 400px;
+    }
+  }
